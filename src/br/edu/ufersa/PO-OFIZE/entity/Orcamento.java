@@ -9,6 +9,7 @@ public class Orcamento {
     private double valorVeiculo;
     private LocalDate data;
     private boolean status;
+    private List<Clientes> cliente;
 
     // GETTERS AND SETTERS
 
@@ -123,7 +124,7 @@ public class Orcamento {
     // Pesquisar por veiculo e/ou por periodo e/ou por cliente
     // Cliente nao pertence a esta classe, mas a ideia é que exista uma lista de clientes e haja comunicacao entre as classes
 
-    public void Pesquisar(String veiculo, List<clientes> cliente, LocalDate dataInicio, LocalDate dataFim) {
+    public void Pesquisar(String veiculo, List<Clientes> cliente, LocalDate dataInicio, LocalDate dataFim) {
         boolean veiculoOk = veiculo == null || this.veiculo.equalsIgnoreCase(veiculo);
         boolean clienteOk = cliente == null || this.cliente.equalsIgnoreCase(cliente);
         boolean dataOk = true;
